@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Wondering Photographer</title>
+
+    <style>
+        /* As in the previous ones the CSS is inside <style> tags, so everything is in one file for
+            this exercise as well. */
+        .cart {
+            text-align: right;
+            width: 500px;
+        }
+        /* This class styles the shopping cart container. text-alight right moves the cart
+        icon to the ride side. widght 500px matches the width of the photos below so everything lines up. */
+
+        .cart img {
+            width: 50px;
+            height: auto;
+        }
+        /* The cart icon image is set to 50px wide, and height auto keeps it porportional  */
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #e85c9b;
+            margin: 0;
+            padding: 0;
+        }
+        /* body, Georgia font for a classic look, bright pink background, and 
+        no margin/padding so content touches the edges. */
+
+        main {
+            width: 500px;
+            margin: auto;
+            margin-top: 40px;
+        }
+        /* The main content is 500px wide and centered. */
+
+        .photo {
+            margin-bottom: 30px;
+        }
+
+        /* Each photo block gets space below it to separate the images. */
+
+        .photo img {
+            width: 500px;
+        }
+        /* Images inside each photo block are set to 500px wide. matching the 
+        countainer width This make all photos the same size.*/
+
+        .photo p {
+            background-color: #e6dfc6;
+            color: #35c6d9;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 6px;
+            margin: 0;
+        }
+         /* The paragraph text inside each photo block is styled with a light background, blue text, bold font, and padding. */
+        footer {
+            width: 599px;
+            margin-left: 540px;
+            font-size: 21px;
+        }
+        /* The footer is styled with a specific width and left margin to align it with the main content. */
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="photo">
+            <img src="pic\TheDivider.png">
+        </div>
+
+        <div class="cart">
+            <a href="pic/shopping.svg">
+                <img src="pic/shopping.svg" alt="cart">
+            </a>
+        </div>
+
+
+        <div class="photo">
+            <img src="pic/OceanPhoto.jpg">
+            <p>This was from a fabulous trip to the cost of Greenland with my family. The water was lovely- but very
+                cold!</p>
+        </div>
+        <button>Add to basket</button>
+        <!-- Each photo is followed by an "Add to basket" button. the button isn't 
+         the .photo dev, so it's separated. "Add to basket" is the text on the button. -->
+
+        <div class="photo">
+            <img src="pic/BridgePhoto.jpg">
+            <p>A picture of the Golden Gate Bridge. New York! New York!</p>
+        </div>
+        <button>Add to basket</button>
+
+        <div class="photo">
+            <img src="pic/ValleyPhoto.jpg">
+            <p>Another great photo from Greenland. It's a river valley where a glacier used to be.</p>
+        </div>
+        <button>Add to basket</button>
+
+        <div class="photo">
+            <img src="pic/WaterfallPhoto.jpg">
+            <p>The waterfall made such a lovely sound. I could have fallen asleep!</p>
+        </div>
+
+        <button style="margin: 0px 0;">Add to basket</button>
+
+    </main>
+
+    <footer>
+
+        <p><b>Copyright The Wondering Photographer 2018.</b></p>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About me</a></li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
