@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Body styles this is the background of the whole page */
+body {
+  background-color: #cccccc; 
+  /* background-color sets the background Light grey background outside the white card */
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family sets the default font for all text */
+  line-height: 1.6;
+  /* line-height sets the spacing between lines of text for easier reading */
+  display: flex;
+  /* display: flex; creates a flex to center the card horizontally and vertically */
+  justify-content: center;
+  /* centers horizontally */
+  padding: 2rem 1rem;
+  /* Adds space around the edges on small screens */
+}
+
+/* This is the White card in the middle */
+.page {
+  background-color: #ffffff;
+  max-width: 650px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+}
+
+/* All heading levels (h1,h2,h3) share these styles. */
+h1,
+h2,
+h3 {
+  color: #2f8b1f;              /* green text */
+  font-family: "Impact", "Arial Black", sans-serif;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Now we adhjyst sizes for each heading individually */
+h1 {
+  font-size: 600%;
+  margin-bottom: 0.3rem;
+}
+
+header h2 {
+  font-size: 300%;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 300%;
+  margin: 2rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Paragraph configuration */
+p {
+  font-size: 110%;
+  color: #000000;
+  text-align: left;
+}
+
+
+/* This is the Green “Did you know?” panel */
+
+.fact-box {
+  background-color: #2f8b1f;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+/*Inside the fact-box, we want the h3 to be white and left-aligned, not centered.*/
+.fact-box h3 {
+  color: white;
+  text-align: left;
+}
+
+/* Tweak text inside green box */
+.fact-box p {
+  color: white;
+  margin-bottom: 0;
+}
