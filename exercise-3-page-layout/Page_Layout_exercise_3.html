@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Bellow all the CSS is inside the tags in the head, so everything
+    is in one file for this exercise -->
+    <style>
+        /* The universal selector (*) applies to every element.
+        I set margin and padding to 0 to remove all default spacing,
+        then box-sizing: border-box makes sure padding and borders are
+        included in the element's today widght, this makes layous much easier
+        to control */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            color: #000000;
+            background-color: #f5f5f5;
+        }
+        /* Body styles: Georigia is a serif font that looks classing and
+        readable. Back ground is light, grey text is black. */
+
+
+        /* Header and Navigation */
+        header {
+            background-color: #e8e8e8;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        /*  The header has a light grey background, lots of padding for spacing,
+        and all text inside is centered. */
+
+        h1 {
+            font-size: 6em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        /* The main heading Title "J's Gallery" is huge
+        ( 6em means 6 times the normal size ). I added letter-spacing to
+         spacing to spread the letter out for a more designed look. */
+
+        nav {
+            margin-bottom: 20px;
+        }
+        /* Adds  space below the navigation menu */
+        nav a {
+            text-decoration: underline;
+            color: #0000ff;
+            margin: 0 30px;
+            font-size: 1.1em;
+        }
+        /* The navigation links are blue and underlined. the 30px margin on
+        left and right spreads them apart horizontally. */
+
+        nav a:hover {
+            color: #0000aa;
+        }
+
+        /* Main Content Container */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: transparent;
+        }
+        /* The main content is centered with margin: 0 auto. max-width
+        stops it from getting too wide on large screens. */
+
+        /* Article Section with Image */
+        article {
+            margin-bottom: 40px;
+        }
+        /* Adds space below the article section */
+
+        article img {
+            float: right;
+            width: 45%;
+            height: auto;
+            margin-top: -10px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            border: 3px solid #969191;
+        }
+        /* The Image floats to the right, with text wrapping around it on the left.
+        Width is 45% so text has enough space. The negative top margin pulls it up slightly to
+        alighn better with the line of text. The grey border makes it stand out. */
+
+        article::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        article p {
+            text-align: left;
+            font-size: 127%;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        /* Paragraph inside the article are left-aligned, slightly larger than normal text
+        (127%), with extra line height for readability */
+
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 10px;
+        }
+        /*  The gallery uses CSS Grid to create two equal-width columns. This
+        automatically arranges the gallery items in rows of two. */
+
+        .gallery-item {
+            overflow: hidden;
+            height: 280px;
+            background-color: #000;
+        }
+        /* Each Gallery item has a fixed height of 280px. overflow: hidden means if an
+        image is too big, the extra parts get cut off instead of breaking the layout. blackground shows
+        through if images have transparency or loading issues. */
+
+        .mountain {            
+            position: relative;
+            left: -200px;           
+            width: 136%;
+            margin-right: 100px;
+        }
+        /* This class moves the mountain image 200px to the left (negative left value)
+        so only part of it shows. Width 136% makes it wider than its container, so when shifted left,
+        it still fills the space. This creates a cropped, artsty effect. */
+
+        .vid {
+            width: 137%;
+        }
+        /* The video item is extra wide so it spills out of its grid cells and get cropped 
+        similar effect to the mountain image */
+
+        .shift-right {
+            margin-left: 200px;
+        }
+
+        .camera {
+            margin-right: 200px;
+        }
+        .car {
+            margin-left: 200px;
+        }
+
+        .valley {
+            width: 137%;
+        }
+        /* Another wide image that spuills out of its containter for a cropped effect */
+
+
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            article img {
+                float: none;
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Title and Navigation -->
+    <header>
+        <h1>J's Gallery</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Article Section with Text and Image -->
+        <article>
+            <img src="Pic/COW.jpg" alt="Cow">
+            <p>
+                Lorem ipsum odor amet, consectetuer adipiscing elit. <br> Praesent mollis adipiscing per id libero libero.
+                Tempus <br> pretium netus molestie scelerisque facilisis tristique <br> volutpat ultricies. Nostra ligula ac
+                pulvinar rutrum non <br> rhoncus mauris facilisi. Quisque maximus commodo <br> sollicitudin, montes congue
+                imperdiet. Est malesuada <br> vivamus vestibulum ante aenean class. Per integer <br> aptent ullamcorper sagittis
+                posuere dignissim morbi scelerisque. Fringilla primis sagittis lorem erat integer; vulputate nullam.
+                Porta purus habitant id fermentum nec ex, proin mauris sem.
+            </p>
+
+            <p>
+                Lectus ultrices nibh lobortis tempus facilisis sit conubia taciti. Non torquent amet nibh elit ante
+                fermentum praesent cras. Et suspendisse egestas eros erat aptent sollicitudin. Nulla tortor purus
+                posuere auctor himenaeos malesuada. Turpis phasellus enim venenatis aliquam pellentesque senectus, id
+                ultrices. Praesent tellus consequat phasellus cubilia mattis mauris natoque litora. Fringilla cursus
+                montes inceptos nec venenatis platea.
+            </p>
+        </article>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+
+            <div class="gallery-item vid">
+                <video controls>
+                    <source src="Pic/video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="gallery-item shift-right">
+                <img src="Pic/img4598.jpg" alt="">
+            </div>
+
+            <div class="gallery-item camera">
+                <img src="Pic/img4532.jpg" alt="">
+            </div>
+
+            <div class="gallery-item mountain">
+                <img src="Pic/photo_2018_02_01.jpg" alt="">
+            </div>
+
+            <div class="gallery-item valley">
+                <img src="Pic/photo_2018_02_31.jpg" alt="">
+            </div>
+
+            <div class="gallery-item car">
+                <img src="Pic/johns car jpg.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
